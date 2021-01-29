@@ -4,7 +4,6 @@ function Pizza(size, crust, sauce, cheese, toppings) {
   this.sauce = sauce;
   this.cheese = cheese;
   this.toppings = toppings;
-  this.pizzaPrice = 10;
 }
 
 Pizza.prototype.pizzaCharge = function() {
@@ -15,11 +14,13 @@ Pizza.prototype.pizzaCharge = function() {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    let size = $("input#size").val();
-    let crust = $("input#crust").val();
-    let sauce = $("input#sauce").val();
-    let cheese = $("#cheese").val();
-    let toppings = $("#toppings").val();
+    let size = $("#size option:selected").text();
+    console.log(size);
+    let crust = $("#crust option:selected").text();
+    let sauce = $("#sauce option:selected").text();
+    let cheese = $("#cheese .form-check:checked").text();
+    console.log(cheese);
+    let toppings = $("#pepperoni input:checked").text();
     console.log(toppings);
 
     let newPizza = new Pizza(size, crust, sauce, cheese, toppings)
