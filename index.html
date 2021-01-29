@@ -15,16 +15,16 @@
       <select class="form-control" id="size">
         <option>- Pizza Size -</option>
         <option>Small 10"</option>
-        <option>Medium 12"</option>
-        <option>Large 14"</option>
-        <option>Family 16"</option>
+        <option value="2">Medium 12" + $2</option>
+        <option value="4">Large 14" + $4</option>
+        <option value="6">Family 16" + $6</option>
       </select>
       <select class="form-control" id="crust">
         <option>- Crust Options -</option>
         <option>Hand Tossed</option>
-        <option>Stuffed</option>
         <option>Thin</option>
-        <option>Pan</option>
+        <option value="2">Stuffed + $2</option>
+        <option value="2">Pan + $2</option>
       </select>
       <select class="form-control" id="sauce">
         <option>- Sauce Options -</option>
@@ -38,76 +38,78 @@
       <div class="form-check">
         <input class="sum" type="checkbox" value="2" id="pepperoni">
         <label class="form-check-label" for="flexCheckDefault">
-          Artisan Pepperoni
+          Artisan Pepperoni + $2
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="2" id="sausage">
         <label class="form-check-label" for="flexCheckDefault">
-          Handcrafted Sausage
+          Handcrafted Sausage + $2
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="2" id="chicken-sausage">
         <label class="form-check-label" for="flexCheckDefault">
-          Spicy Chicken Sausage
+          Spicy Chicken Sausage + $2
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="2" id="bacon">
         <label class="form-check-label" for="flexCheckDefault">
-          Premium Bacon
+          Premium Bacon + $2
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="2" id="canadian">
         <label class="form-check-label" for="flexCheckDefault">
-          Canadian Bacon
+          Canadian Bacon + $2
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="onion">
         <label class="form-check-label" for="flexCheckDefault">
-          Grilled Onion
+          Grilled Onion + $1
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="peppers">
         <label class="form-check-label" for="flexCheckDefault">
-          Red Hot lil-mama's Peppers
+          Red Hot lil-mama's Peppers + $1
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="pineapple">
         <label class="form-check-label" for="flexCheckDefault">
-          Pineapple Chunks
+          Pineapple Chunks + $1
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="tomato">
         <label class="form-check-label" for="flexCheckDefault">
-          Fresh Sliced Tomatoes
+          Fresh Sliced Tomatoes + $1
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="jalepeno">
         <label class="form-check-label" for="flexCheckDefault">
-          Artisan Pickled Jalepeno's
+          Artisan Pickled Jalepeno's + $1
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="olive">
         <label class="form-check-label" for="flexCheckDefault">
-          Organic Black Olives
+          Organic Black Olives + $1
         </label>
       </div>
       <div class="form-check">
         <input class="sum" type="checkbox" value="1" id="artichoke">
         <label class="form-check-label" for="flexCheckDefault">
-          Artichoke Chunks
+          Artichoke Chunks + $1
         </label>
       </div>
       <button class="btn btn-dark btn-md">Place Order!</button>
+      <label>Pizza Price</label>
+      <input type="text" id="total">
       </div>
     </form>
   </div>
