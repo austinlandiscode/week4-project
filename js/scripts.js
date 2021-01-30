@@ -33,6 +33,6 @@ $(document).ready(function() {
     let newPizza = new Pizza(size, crust, sauce, cheese, meattoppings, othertoppings)
     console.log(newPizza);
     newPizza.pizzaCharge();
-    $("#order").text(`You ordered a ${size} pizza with ${crust} crust, ${sauce} sauce, ${cheese}, ${meattoppings}, and ${othertoppings}.`)
+    $("#order").text(`You ordered a ${size} size pizza with ${crust} crust, ${sauce} sauce, ${cheese}, ${meattoppings}, and ${othertoppings}. That will be $${newPizza.price}!`)
   })
 });
