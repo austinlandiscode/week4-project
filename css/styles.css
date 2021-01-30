@@ -4,3 +4,10 @@ button {
 body {
   background-color: rgb(250, 123, 76);
 }
+h1 {
+  text-align: center;
+  font-size: 80px;
+}
+#order {
+  font-size: large;
+}
