@@ -1,39 +1,37 @@
-function Pizza(size, crust, sauce, cheese, toppings) {
+function Pizza(size, crust, sauce, cheese, meattoppings, othertoppings) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
-  this.toppings = toppings;
+  this.meattoppings = meattoppings;
+  this.othertoppings = othertoppings;
+  this.price = 10;
 }
 
 Pizza.prototype.pizzaCharge = function() {
-  console.log(this.size);
-  console.log(newPizza);
+  if (this.size === 'Small 10"') {
+    this.price;
+  } else if (this.size === 'Medium 12"') {
+    this.price += 2;
+  } else if (this.size === 'Large 14"') {
+    this.price += 4;
+  } else {
+    this.price += 6;
+  }
+  return this.price
 }
-
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    let size = $("#size option:selected").text();
-    console.log(size);
-    let crust = $("#crust option:selected").text();
-    let sauce = $("#sauce option:selected").text();
-    let cheese = $("#cheese .form-check:checked").text();
-    console.log(cheese);
-    let toppings = $("#pepperoni input:checked").text();
-    console.log(toppings);
+    let size = $("select#size").val();
+    let crust = $("select#crust").val();
+    let sauce = $("select#sauce").val();
+    let cheese = $("select#cheese").val();
+    let meattoppings = $("select#meattoppings").val();
+    let othertoppings = $("select#othertoppings").val();
 
-    let newPizza = new Pizza(size, crust, sauce, cheese, toppings)
+    let newPizza = new Pizza(size, crust, sauce, cheese, meattoppings, othertoppings)
     console.log(newPizza);
-
+    newPizza.pizzaCharge();
   })
-    
-    function updateSum() {
-    let total = 0;
-    $(".sum:checked").each(function(i, n) {total += parseInt($(n).val());})
-    $("#total").val(total);
-  }
-  // run the update on every checkbox change and on startup
-  $(".sum").change(updateSum);
-  updateSum();
 });
