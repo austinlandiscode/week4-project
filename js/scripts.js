@@ -50,10 +50,10 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
 
-    let name = $("input#name").text();
+    let name = $("input#name").val();
     let size = $("select#size").val();
     let crust = $("select#crust").val();
-    let sauce = $("select#sauce").val();
+    let sauce = $("select#sauce").val();``
     let cheese = $("select#cheese").val();
     let meattoppings = $("select#meattoppings").val();
     let othertoppings = $("select#othertoppings").val();
@@ -61,6 +61,6 @@ $(document).ready(function() {
     let newPizza = new Pizza(name, size, crust, sauce, cheese, meattoppings, othertoppings);
     // clientLog.addClient(newPizza);
     newPizza.pizzaCharge();
-    $("#order").text(`You ordered a ${size} size pizza with ${crust} crust, ${sauce} sauce, ${cheese}, ${meattoppings}, and ${othertoppings}. That will be $${newPizza.price}!`)
+    $("#order").text(`Hey ${name}, you ordered a ${size} size pizza with ${crust} crust, ${sauce} sauce, ${cheese}, ${meattoppings}, and ${othertoppings}. That will be $${newPizza.price}!`)
   });
 });
