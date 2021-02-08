@@ -19,24 +19,24 @@ This web application is designed to receive input's from the user using a constr
 
 ## Specs
 SPEC 1 - Describe: Pizza()
-Test: "It should store properties inside of an object."
-Expect: Pizza(size).toEqual(this.size = size)
+Test: "It should store properties inside of an object"
+Code: let userPizza = new Pizza('10" Small');
+Expect(userPizza.size).toEqual('10" Small');
 
 SPEC 2 - Describe: Pizza()
 Test: "It should store properties inside of an object."
-Expect: Pizza(crust).toEqual(this.crust = crust)
+Code: let userPizza = new Pizza('Thin');
+Expect(userPizza.crust.toEqual('Thin);
 
 SPEC 3 - Describe: Pizza()
 Test: "It should store properties inside of an object."
-Expect: Pizza(topping).toEqual(this.topping = topping)
+Code: let userPizza = new Pizza('Creamy Garlic');
+Expect(userPizza.sauce.toEqual('Creamy Garlic);
 
 SPEC 4 - Describe: Pizza.prototype.pizzaCharge()
 Test: "It should use conditional statements to decide pricing for the pizza."
-Expect if(condition === met) this.price += (X)
-
-Spec 5 - Describe: Document.ready()
-Test: "It should scan the whole document before linking, allowing links to be in head."
-Expect Document.ready(function).toEqual(UI Functions)
+Code: if(this.size === 'size') {this.price += X};
+Expect(this.size.toEqueal(this.price += X )
 
 ## Setup/Installation Requirements
 

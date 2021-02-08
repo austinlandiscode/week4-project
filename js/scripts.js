@@ -1,25 +1,3 @@
-// function ClientLog() {
-//   this.clients = {};
-//   this.currentId = 0;
-// }
-
-// ClientLog.prototype.addClient = function(pizza) {
-//   client.id = this.assignId();
-//   this.clients[client.id] = client;
-// }
-
-// ClientLog.prototype.assignId = function() {
-//   this.currentId += 1;
-//   return this.currentId;
-// }
-
-// ClientLog.prototype.findClient = function(id) {
-//   if (this.clients[id] != undefined) {
-//     return this.clients[id];
-//   }
-//   return false;
-// }
-
 function Pizza(name, size, crust, sauce, cheese, meattoppings, othertoppings) {
   this.name = name;
   this.size = size;
@@ -44,8 +22,6 @@ Pizza.prototype.pizzaCharge = function() {
   return this.price
 }
 
-// let clientLog = new ClientLog();
-
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
@@ -59,7 +35,7 @@ $(document).ready(function() {
     let othertoppings = $("select#othertoppings").val();
 
     let newPizza = new Pizza(name, size, crust, sauce, cheese, meattoppings, othertoppings);
-    // clientLog.addClient(newPizza);
+    
     newPizza.pizzaCharge();
     $("#order").text(`Hey ${name}, you ordered a ${size} size pizza with ${crust} crust, ${sauce} sauce, ${cheese}, ${meattoppings}, and ${othertoppings}. That will be $${newPizza.price}!`)
   });
